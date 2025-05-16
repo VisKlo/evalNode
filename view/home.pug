@@ -1,0 +1,14 @@
+extends ./layout/layout
+
+block content
+
+    h1 Ajouter un utilisateur
+
+    form(method="POST", action="/add")
+        label(for="name") Nom :
+        input(type="text", name="name", required)
+
+        label(for="birth") Date de naissance :
+        input(type="date", name="birth", required)
+
+        button(type="submit") Ajouter

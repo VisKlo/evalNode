@@ -1,0 +1,12 @@
+extends ./layout/layout
+
+block content
+
+    h1 Liste des utilisateurs
+
+    ul
+        each student in students
+            li
+                | #{student.name} - #{student.birthFormatted} 
+                a(href=`/edit/${student.id}`) [modifier]
+                a(href=`/delete/${student.id}`) [X]

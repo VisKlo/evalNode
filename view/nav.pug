@@ -1,0 +1,8 @@
+mixin navItem(path, title, currentPath)
+    li(class=(path === currentPath ? 'active' : ''))
+        a(href=path)= title
+
+nav
+    ul
+        +navItem("/", "Nouvel utilisateur", currentPath)
+        +navItem("/users", "Utilisateurs", currentPath)

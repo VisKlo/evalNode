@@ -1,0 +1,14 @@
+extends ./layout/layout
+
+block content
+
+    h1 Modifier un utilisateur
+
+    form(method="POST", action=`/update/${student.id}`)
+        label(for="name") Nom :
+        input(type="text", name="name", required, value=student.name)
+
+        label(for="birth") Date de naissance :
+        input(type="date", name="birth", required, value=student.birth)
+
+        button(type="submit") Enregistrer
